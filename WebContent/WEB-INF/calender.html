@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="zh">
+<head>
+
+
+
+
+
+
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <title>日程安排</title>
+    <link href="css/style.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="css/iconic.css" media="screen" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/function_css/calender_css.css">
+    <script src="js/prefix-free.js"></script>
+    <script src="js/themechange.js"></script>
+    <script src="jquery-1.7.1.min.js" language="JavaScript"></script>
+</head>
+
+<body id="BODY" onload="init()">
+<div class="wrap">
+
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html"><span class="iconic home"></span> 首页</a></li>
+            <li><a href="#"><span class="iconic plus-alt"></span> 关于</a>
+                <ul>
+                    <li><a href="#">产品介绍</a></li>
+                    <li><a href="#">我们的团队</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><span class="iconic magnifying-glass"></span> 选择主题</a>
+                <ul>
+                    <li onclick="themewhite()"><a href="#">纯白色</a></li>
+                    <li onclick="themegrey()"><a href="#">纯灰色</a></li>
+                    <li onclick="themeblue()"><a href="#">纯蓝色</a></li>
+                    <li onclick="themered()"><a href="#">纯红色</a></li>
+                    <li><a href="#">主题1</a></li>
+                    <li><a href="#">主题2</a></li>
+                    <li><a href="#">主题3</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><span class="iconic map-pin"></span> 为您提供的通讯模式</a>
+                <ul>
+                    <li><a href="#">a模式</a></li>
+                    <li><a href="#">b模式</a></li>
+                    <li><a href="#">c模式</a></li>
+                    <li><a href="#">d模式</a></li>
+                    <li><a href="#">e模式</a></li>
+                    <li><a href="#">f模式</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><span class="iconic mail"></span> 用户</a>
+                <ul>
+                    <li><a href="/IM/GoLogin">切换用户</a></li>
+                    <li><a href="/IM/GoLogin">退出登录</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </nav>
+</div>
+
+<div class="calendar-container">
+    <div class="calendar">
+        <header>
+            <h2 class="month"></h2>
+            <a class="btn-prev fontawesome-angle-left" href="#"></a>
+            <a class="btn-next fontawesome-angle-right" href="#"></a>
+        </header>
+        <table>
+            <thead>
+            <tr><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td><td>六</td><td>日</td></tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td date-month="12" date-day="1">1</td>
+                <td date-month="12" date-day="2">2</td>
+                <td date-month="12" date-day="3">3</td>
+                <td date-month="12" date-day="4">4</td>
+                <td date-month="12" date-day="5">5</td>
+                <td date-month="12" date-day="6">6</td>
+                <td date-month="12" date-day="7">7</td>
+            </tr>
+            <tr>
+                <td date-month="12" date-day="8">8</td>
+                <td date-month="12" date-day="9">9</td>
+                <td date-month="12" date-day="10">10</td>
+                <td date-month="12" date-day="11">11</td>
+                <td date-month="12" date-day="12">12</td>
+                <td date-month="12" date-day="13">13</td>
+                <td date-month="12" date-day="14">14</td>
+            </tr>
+            <tr>
+                <td date-month="12" date-day="15">15</td>
+                <td date-month="12" date-day="16">16</td>
+                <td date-month="12" date-day="17">17</td>
+                <td date-month="12" date-day="18">18</td>
+                <td date-month="12" date-day="19">19</td>
+                <td date-month="12" date-day="20">20</td>
+                <td date-month="12" date-day="21">21</td>
+            </tr>
+            <tr>
+                <td date-month="12" date-day="22">22</td>
+                <td date-month="12" date-day="23">23</td>
+                <td date-month="12" date-day="24">24</td>
+                <td date-month="12" date-day="25">25</td>
+                <td date-month="12" date-day="26">26</td>
+                <td date-month="12" date-day="27">27</td>
+                <td date-month="12" date-day="28">28</td>
+            </tr>
+            <tr>
+                <td date-month="12" date-day="29">29</td>
+                <td date-month="12" date-day="30">30</td>
+                <td date-month="12" date-day="31">31</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="list">
+            <div class="day-event" date-month="12" date-day="4">
+                <a href="#" class="close fontawesome-remove"></a>
+                <h2 class="title">Lorem ipsum 1</h2>
+                <p class="date">2015-01-23</p>
+                <p>Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok.</p>
+                <label>
+                    <span>Read more!</span>
+                </label>
+            </div>
+            <div class="day-event" date-month="12" date-day="13">
+                <a href="#" class="close fontawesome-remove"></a>
+                <h2 class="title">Lorem ipsum 2</h2>
+                <p class="date">2015-01-23</p>
+                <p>Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok.</p>
+                <label>
+                    <span>Read more!</span>
+                </label>
+            </div>
+            <div class="day-event" date-month="12" date-day="14">
+                <a href="#" class="close fontawesome-remove"></a>
+                <h2 class="title">Lorem ipsum 3</h2>
+                <p class="date">2015-01-23</p>
+                <p>Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok.</p>
+                <label>
+                    <span>Read more!</span>
+                </label>
+            </div>
+            <div class="day-event" date-month="12" date-day="16">
+                <a href="#" class="close fontawesome-remove"></a>
+                <h2 class="title">Lorem ipsum 4</h2>
+                <p class="date">2015-01-23</p>
+                <p>Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok.</p>
+                <label>
+                    <span>Read more!</span>
+                </label>
+            </div>
+            <div class="day-event" date-month="12" date-day="24">
+                <a href="#" class="close fontawesome-remove"></a>
+                <h2 class="title">Lorem ipsum 5</h2>
+                <p class="date">2015-01-23</p>
+                <p>Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok.</p>
+                <label>
+                    <span>Read more!</span>
+                </label>
+            </div>
+            <div class="day-event" date-month="12" date-day="31">
+                <a href="#" class="close fontawesome-remove"></a>
+                <h2 class="title">Lorem ipsum 6</h2>
+                <p class="date">2014-12-31</p>
+                <p>Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok.</p>
+                <label>
+                    <span>Read more!</span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="js/function.js" type="text/javascript"></script>
+
+</body>
+</html>

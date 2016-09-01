@@ -1,0 +1,107 @@
+html, body, th, td, dl, dt, dd, ul, ol, li, form, textarea, input, select {
+    margin: 0;
+    padding: 0;
+    font: 12px Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+img, body, html {
+    border: 0;
+}
+
+img, input, select, button {
+    vertical-align: middle;
+}
+
+a {
+    color: #336;
+    outline: none;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f00;
+    text-decoration: underline;
+}
+
+ol, ul, dl {
+    list-style: none;
+}
+
+.clearFix {
+    overflow: hidden;
+    zoom: 1;
+}
+
+input{
+    font-size:14px;
+    padding:1px 3px;
+}
+tbody {
+    text-align: center;
+}
+/*
+#loginForm {
+    text-align: left;
+    margin: 100px auto;
+    width: 300px;
+    border: 1px solid #aaa;
+    background: #fafafa;
+    padding: 20px;
+}
+*/
+#getPwdBack {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+
+}
+
+#copyright {
+    color: #666;
+    text-align: center;
+}
+/*
+#footer {
+    text-align: center;
+    padding:10px;
+}
+*/
+#captchaImg{
+    width:60px;
+    height:20px;
+    cursor:pointer;
+    margin:0 10px;
+}
+
+#top{ width:1024px;height:183px;}
+#top_1{ width:102px;height:183px; background:url(../images/r1_c1.jpg) no-repeat;float:left;}
+#top_2{ width:322px;height:183px; background:url(../images/r1_c2.jpg) no-repeat;float:left;}
+#top_3{ width:313px;height:183px; background:url(../images/r1_c4.jpg) no-repeat;float:left;}
+#top_4{ width:287px;height:183px; background:url(../images/r1_c8.jpg) no-repeat;float:left;}
+
+
+#mid{ width:1024px;height:220px; }
+#mid_1{ width:245px;height:220px; background:url(../images/r2_c1.jpg) no-repeat; float:left}
+#mid_2{ width:237px;height:220px; background:url(../images/r2_c3.jpg) no-repeat; float:left}
+#mid_3{ width:217px;height:220px; background:url(../images/r2_c5.jpg) no-repeat; float:left}
+#mid_4{ width:325px;height:220px; background:url(../images/r2_c7.jpg) no-repeat; float:left}
+
+
+#footer{ width:1024px;height:166px; }
+#footer_l{ width:560px;height:166px; background:url(../images/r3_c1.jpg) no-repeat; float:left}
+#footer_r{ width:464px;height:166px; background:url(../images/r3_c6.jpg) no-repeat; float:left}
+
+#topmenu{ margin:5px 25px 0 0;}
+#topmenu ul{list-style:none;}
+#topmenu ul li{float:left; line-height:18px; height:18px; padding:0 2px; }
+.space{width:15px;}
+
+#topmenu ul li a{text-decoration:none;color:#333;font-size:11px;}
+#topmenu ul li a:hover{color:#ff8400;}
+
+#text1 {font-size:12px;color:#003399;margin-top:15px;}
+#text2 {font-size:12px;color:#888;margin-top:120px;}
