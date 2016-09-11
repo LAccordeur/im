@@ -1,5 +1,10 @@
-
-<!DOCTYPE html>
+<%@page import="com.im.util.ChatHelper"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.im.service.UsersService"%>
+<%@page import="com.im.model.*" %>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
@@ -108,7 +113,7 @@
                 <div class="chat01">
                     <div class="chat01_title">
                         <ul class="talkTo">
-                            <li><a href="javascript:;">员工3</a></li></ul>
+                            <li><a href="javascript:;">聊天窗口</a></li></ul>
                         <a class="close_btn" href="javascript:;"></a>
                     </div>
                     <div class="chat01_content">
@@ -132,6 +137,22 @@
                         </div>
                         <div class="message_box mes10">
                         </div>
+                        <%--
+                        <%
+                        HttpSession session2 = request.getSession();
+                        User user1 = (User)session2.getAttribute("loginInfo");
+                        String JID = (String)session2.getAttribute("receiverJID");
+                        String username = user1.getUsername();
+                        String password = user1.getPassword();
+                        if (username != null && password != null && JID != null) {
+                        	%>
+                        	<%=ChatHelper.receiveMessage(username, password, JID) %>
+                        	<%
+                        }
+                        
+                        %>
+                        --%>
+                        
                     </div>
                 </div>
                 <div class="chat02">
@@ -245,16 +266,22 @@
                             </div>
                         </div>
                     </div>
+                    <!-- 聊天信息表单 -->
+                    <form action="/IM/ChatServlet" method=post>
                     <div class="chat02_content">
-                        <textarea id="textarea"></textarea>
+                        <textarea id="textarea" name = "message"></textarea>
                     </div>
                     <div class="chat02_bar">
                         <ul>
-
-                            <li style="right: 5px; top: 5px;"><a href="javascript:;">
-                                <img src="img/send_btn.jpg"></a></li>
+							<li style="right: 5px; top: 5px;">消息接收者：<input type=text name = "JID"></li>
+                            <li style="right: 5px; top: 5px;"><!-- <a href="javascript:;">
+                                <img src="img/send_btn.jpg">-->
+                                <input type = "submit" value = "发送">
+                                </li>
                         </ul>
                     </div>
+                    </form>
+                    
                 </div>
             </div>
             <div class="chatRight">
@@ -265,6 +292,7 @@
                     </div>
                     <div class="chat03_content">
                         <ul>
+                        <!--
                             <li>
                                 <label class="online">
                                 </label>
@@ -324,6 +352,17 @@
                                 <a href="javascript:;">
                                     <img src="img/head/2022.jpg"></a><a href="javascript:;" class="chat03_name">员工10</a>
                             </li>
+                        -->
+                        <%
+                                    UsersService usersService = new UsersService();
+                                    ArrayList<User> allUsers = usersService.getAllUsers();
+                                    for (User user : allUsers) {
+                                    	%>
+                                 		<li><%=user.getUsername() %></li>
+                                    	<%
+                                    }
+                                    	
+                        %>
                         </ul>
                     </div>
                 </div>
@@ -394,5 +433,17 @@
     <center class="hint">拖动中央线条以改变页面比例</center>
 </div>
 </body>
+<script src="/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	$.ajax({
+	    type: "post",
+	    url: "${ctx}/index/listNewestProject.do?jointStat=3&listCounts=10",
+	    dataType: "json",
+	    success: function (response) {
+	       
+	    }
+	});
 
+
+</script>
 </html>

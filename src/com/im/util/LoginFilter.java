@@ -18,7 +18,7 @@ import com.im.model.User;
 /**
  * Servlet Filter implementation class LoginFilter
  */
-@WebFilter(filterName = "/LoginFilter",urlPatterns = {"/*"},initParams = {@WebInitParam(name = "noFilter",value = "GoLogin,LoginClServlet")})
+@WebFilter(filterName = "/LoginFilter",urlPatterns = {"/*"},initParams = {@WebInitParam(name = "noFilter",value = "JumpServlet,LoginClServlet,ChatServlet,ReceiveMsg,/IM/images,/IM/js,/IM/index.jsp,/IM/css,/IM/img,/IM/fonts")})
 public class LoginFilter implements Filter {
 	
 	private FilterConfig config;
@@ -47,7 +47,7 @@ public class LoginFilter implements Filter {
 		//放行那些不想被过滤的页面
 		//获取初始参数
 		String uri = request2.getRequestURI();
-		System.out.println("过滤器所得到的uri:"+uri);
+		//System.out.println("过滤器所得到的uri:"+uri);
 		String string = config.getInitParameter("noFilter");
 		if (string != null) {
 			//System.out.println("配置信息："+string);

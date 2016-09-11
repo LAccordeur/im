@@ -18,16 +18,16 @@ public class UsersService {
 	
 	//验证用户是否合法
 	public boolean checkUser(User user) {
-		int id = user.getId();
+		String username = user.getUsername();
 		String password = user.getPassword();
 		
 		//获得数据库连接
 		DBUtil dbUtil = new DBUtil();
 		connection = dbUtil.getConnection();
-		String sql = "select * from users where id = ? and password = ?";
+		String sql = "select * from ofuser where username = ? and plainPassword = ?";
 		try {
 			preparedStatement = connection.prepareStatement(sql);
-			preparedStatement.setInt(1, id);
+			preparedStatement.setString(1, username);
 			preparedStatement.setString(2, password);
 			
 			//取得结果
@@ -211,5 +211,32 @@ public class UsersService {
 		}
 		
 		return true;
+	}
+	
+	//返回所有用户
+	public ArrayList<User> getAllUsers(){
+		ArrayList<User> allUsers = new ArrayList<User>();
+		
+		DBUtil dbUtil = new DBUtil();
+		connection = dbUtil.getConnection();
+		String sql = "select * from ofuser;";
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			resultSet  = preparedStatement.executeQuery();
+			
+			//将结果封装到arraylist中
+			while (resultSet.next()) {
+				User user = new User();//必须放循环里面
+				user.setUsername(resultSet.getString(1));
+				user.setEmail(resultSet.getString(9));
+				allUsers.add(user);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		return allUsers;
 	}
 }

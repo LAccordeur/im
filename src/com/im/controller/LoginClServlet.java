@@ -35,10 +35,10 @@ public class LoginClServlet extends HttpServlet {
 		response.setContentType("text/html;charset = utf-8");
 		request.setCharacterEncoding("utf-8");
 		//接收用户提交的用户名和密码及其他操作标识
-		String id = request.getParameter("user");
+		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		
-		System.out.println("接收的用户账号为"+id);
+		System.out.println("接收的用户名为"+username);
 		System.out.println("接收的用户密码为"+password);
 		
 //		String keepInfo = request.getParameter("keepInfo");
@@ -90,11 +90,12 @@ public class LoginClServlet extends HttpServlet {
 		UsersService usersService = new UsersService();
 		boolean result = false;
 		User user = new User();
-		if (id != null) {
-			user.setId(Integer.parseInt(id));
+		if (username != null) {
+			user.setUsername(username);
 		}
-		user.setPassword(password);
-		
+		if (password != null) {
+			user.setPassword(password);
+		}
 		result = usersService.checkUser(user);
 		
 //		if (result) {
@@ -113,9 +114,9 @@ public class LoginClServlet extends HttpServlet {
 			//把user对象保存到session
 			HttpSession session = request.getSession();
 			session.setAttribute("loginInfo", user);
-			System.out.println("session属性已设置");
+			System.out.println("session属性loginInfo已设置");
 			//response.sendRedirect("/IM/home.html");
-			request.getRequestDispatcher("/WEB-INF/home.html").forward(request, response);
+			request.getRequestDispatcher("/WEB-INF/home2.0.jsp").forward(request, response);
 		} else {
 			request.setAttribute("err", "用户名和密码不匹配！！");
 			request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);

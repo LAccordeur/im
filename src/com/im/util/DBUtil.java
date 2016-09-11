@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class DBUtil {
-	private static final String URL = "jdbc:mysql://127.0.0.1:3306/imooc?characterEncoding=utf8";
+	private static final String URL = "jdbc:mysql://127.0.0.1:3306/openfire?characterEncoding=utf8";
 	private static final String USER = "root";
 	private static final String PASSWORD = "guoyang121";
 	

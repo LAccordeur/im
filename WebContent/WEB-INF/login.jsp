@@ -27,7 +27,7 @@ function checkNumber() {
 		return false;
 	}
 	
-	var reg = /^[0-9]{1,11}$/;
+	var reg = /^[a-zA-Z0-9]{3,12}$/;
 	
 	if (!reg.test(num1)) {
 		window.alert("输入的账号非法");
@@ -37,7 +37,7 @@ function checkNumber() {
 </script>
 </head>
 <body>
-<form id="loginForm" name="loginForm" method="post" action="LoginClServlet">
+<form id="loginForm" name="loginForm" method="post" action="/IM/LoginClServlet">
     <table width="100%" height="100%" border="0" align="left" cellpadding="0" cellspacing="0" >
         <tr>
             <td><table width="100%" background="images/bg.jpg" border="0" align="left" cellpadding="0" cellspacing="0"  >
@@ -51,8 +51,8 @@ function checkNumber() {
                             <td height="240" colspan="2">&nbsp;</td>
                             <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
                                 <tr>
-                                    <td width="24%" height="37" align="right" valign="middle" style="font-size:12px;">用户账号：</td>
-                                    <td width="76%" align="left" ><input type="text" name="user" size="16" eMsg=""  id="username" tabindex="1" style="height:22px; width:150px; border:1px solid #c0c0c0; line-height:22px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: bold;line-height:24px;"><a href="getBackPassword.portal">找回密码</a></span></td>
+                                    <td width="24%" height="37" align="right" valign="middle" style="font-size:12px;">用户名：</td>
+                                    <td width="76%" align="left" ><input type="text" name="username" size="16" eMsg=""  id="username" tabindex="1" style="height:22px; width:150px; border:1px solid #c0c0c0; line-height:22px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: bold;line-height:24px;"><a href="getBackPassword.portal">找回密码</a></span></td>
                                 </tr>
                                 <tr>
                                     <td height="37" align="right" valign="middle" style="font-size:12px;">密&nbsp;&nbsp;&nbsp;码：</td>

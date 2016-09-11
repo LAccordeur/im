@@ -14,5 +14,8 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="lib/mysql-connector-java-3.1.14-bin.jar"/>
+	<classpathentry kind="lib" path="lib/smack-3.4.1-0cec571.jar"/>
+	<classpathentry kind="lib" path="lib/smackx-3.4.1-0cec571.jar"/>
+	<classpathentry kind="lib" path="lib/smackx-debug-3.4.1-0cec571.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

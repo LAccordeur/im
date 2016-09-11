@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <title>财务申报</title>
+    <link href="css/style.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="css/iconic.css" media="screen" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/function_css/calender_css.css">
+    <script src="js/prefix-free.js"></script>
+    <script src="js/themechange.js"></script>
+    <script src="js/jquery-1.7.2.min.js" language="JavaScript"></script>
+</head>
+
+<body id="BODY" onload="init()">
+<div class="wrap">
+
+    <nav>
+        <ul class="menu">
+            <li><a href="/IM/JumpServlet?key=goHome"><span class="iconic home"></span> 首页</a></li>
+            <li><a href="#"><span class="iconic plus-alt"></span> 关于</a>
+                <ul>
+                    <li><a href="#">产品介绍</a></li>
+                    <li><a href="#">我们的团队</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><span class="iconic magnifying-glass"></span> 选择主题</a>
+                <ul>
+                    <li onclick="themewhite()"><a href="#">纯白色</a></li>
+                    <li onclick="themegrey()"><a href="#">纯灰色</a></li>
+                    <li onclick="themeblue()"><a href="#">纯蓝色</a></li>
+                    <li onclick="themered()"><a href="#">纯红色</a></li>
+                    <li><a href="#">主题1</a></li>
+                    <li><a href="#">主题2</a></li>
+                    <li><a href="#">主题3</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><span class="iconic map-pin"></span> 为您提供的通讯模式</a>
+                <ul>
+                    <li><a href="#">a模式</a></li>
+                    <li><a href="#">b模式</a></li>
+                    <li><a href="#">c模式</a></li>
+                    <li><a href="#">d模式</a></li>
+                    <li><a href="#">e模式</a></li>
+                    <li><a href="#">f模式</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><span class="iconic mail"></span> 用户</a>
+                <ul>
+                    <li><a href="#">切换用户</a></li>
+                    <li><a href="#">退出登录</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </nav>
+</div>
+
+<div id = "content_file" style="margin-left: 350px;margin-right: auto;">
+    <iframe id="frame_file" src="FileUpload.htm" style="height: 400px;width: 800px; " ></iframe>
+</div>
+
+
+</body>
+</html>

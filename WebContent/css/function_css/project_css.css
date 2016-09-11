@@ -1,0 +1,29 @@
+#project_content {
+
+    width: 1028px;
+    height:500px;
+    border:solid 1px #222222;"
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto
+}
+
+.project_top {
+    height:30px;
+    width: auto;
+    text-align:right;
+    margin-top: 10px;
+    margin-left:auto;
+    margin-right:20px;
+}
+
+.project_search {
+    height: 25px;
+    width: 200px;
+}
+
+#submit_search {
+    height: 30px;
+    width: 60px;
+    margin-left:5px;
+}
